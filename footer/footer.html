@@ -9,7 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 <style>
     body {
@@ -22,19 +21,15 @@
         padding: 40px 0 40px;
     }
 
+    .rows{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     .footer-left{
         box-sizing: border-box;
-        width: 67.5%;
         margin-left:20px;
-    }
-
-    .footer-mid{
-        width: 12%;
-    }
-
-    .footer-mid p,.footer-right p{
-        font-size: 14px;
-        opacity: 0.8;
     }
 
     .footer ul, .footer-left p{
@@ -48,7 +43,6 @@
         color: inherit;
         text-decoration: none;
         opacity: 0.8;
-
     }
 
     .footer ul li, .footer-left p{
@@ -62,13 +56,18 @@
     }
 
     .footer-left p{
-        font-size: 13px;
+        font-size: 12px;
         opacity: 0.7;
     }
 
-    .rows{
+    .footer-wrap{
         display: flex;
-        flex-wrap: wrap;
+        column-gap: 90px;
+    }
+
+    .footer-wrap p{
+        font-size: 14px;
+        opacity: 0.8;
     }
 
     .sci{
@@ -104,11 +103,26 @@
     .playstore img:nth-child(1):hover, .appstore img:nth-child(1):hover{
         opacity: 1;
     }
-    
-</style>
 
+    @media screen and (max-width:512px){
+        .footer-left{
+            width: 95%;
+        }
+        .rows{
+            display: inline-block;
+        }
+        .footer-wrap{
+            column-gap: 50px;
+            margin-left: 30px;
+            width: auto;
+        }   
+        .footer-right{
+            margin-left: 30px;
+        }
+    }
+
+</style>
 <body>
-    
     <div class="footer">
         <div class="containers">
             <div class="rows">
@@ -123,7 +137,7 @@
             <p class="coryright">© 2564 ดิสนีย์และบริษัทในเครือที่เกี่ยวข้อง © 2564 บริษัทผู้อนุญาตให้ใช้สิทธิของดิสนีย์ สงวนสิทธิ์ทุกประการ</p>
             </div>
 
-            <div class="footer-mid">  
+        <div class="footer-wrap">
                 <div class="appsocial">
                     <div>
                         <p>เชื่อมต่อกับเรา</p>
@@ -133,27 +147,24 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="footer-right">
-                <div class="app">
-                    <div class="wrapper">
-                        <p>แอป Disney+ Hotstar</p>
-                            <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar.dplus" target="_blank" class="playstore">
-                                <img src="image/playhover.svg">
-                                <img src="image/googleplay.svg">
-                            </a>
-                            <a href="https://apps.apple.com/us/app/disney-hotstar/id1524156685" target="_blank" class="appstore">
-                                <img src="image/applehover.svg">
-                                <img src="image/applestore.svg">
-                            </a>
+        <div class="app">
+            <div class="wrapper">
+                <p>แอป Disney+ Hotstar</p>
+                    <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar.dplus" target="_blank" class="playstore">
+                        <img src="images/playhover.svg">
+                        <img src="images/googleplay.svg">
+                        </a>
+                    <a href="https://apps.apple.com/us/app/disney-hotstar/id1524156685" target="_blank" class="appstore">
+                        <img src="images/applehover.svg">
+                        <img src="images/applestore.svg">
+                    </a>
                     </div>
                 </div>
             </div>
-        </div>  
-        </div>
+         </div>
+       </div>
     </div>
-
+</div>
 </body>
-
 </html>
